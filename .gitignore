@@ -1,0 +1,32 @@
+# Node dependencies
+node_modules/
+
+# Python caches/bytecode
+__pycache__/
+*.py[cod]
+
+# Project/runtime generated outputs
+cache/
+artifacts/
+dist/
+build/
+out/
+
+# Local tool state
+.claude/
+
+# Local secrets/config
+env.json
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+.venv/
+venv/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

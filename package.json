@@ -1,0 +1,13 @@
+{
+  "name": "Protocol Integrity",
+  "version": "3.1.0",
+  "description": "Блокчэйн-д суурилсан хурлын тэмдэглэлийн систем",
+  "main": "app2.py",
+  "scripts": {
+    "start": "python3 app2.py"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.28.6"
+  }
+}

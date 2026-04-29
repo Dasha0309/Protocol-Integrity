@@ -1,0 +1,8 @@
+customtkinter
+pyaudio
+requests
+cryptography
+web3
+google-generativeai
+google-genai
+reportlab

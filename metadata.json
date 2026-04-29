@@ -1,0 +1,6 @@
+{
+  "name": "Protocol Integrity",
+  "description": "Блокчэйн-д суурилсан хурлын тэмдэглэлийн систем. Хурлын дуу бичлэгийг текст болгож, нууцлалыг Gemini API-р хангаж, WAV hash-ийг блокчэйн-д хадгална.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["audio_recording", "ai_processing", "blockchain"]
+}

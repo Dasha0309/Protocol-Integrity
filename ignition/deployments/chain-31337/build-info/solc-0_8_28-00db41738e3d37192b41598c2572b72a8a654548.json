@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-00db41738e3d37192b41598c2572b72a8a654548",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/ProtocolIntegrity.sol": "project/contracts/ProtocolIntegrity.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/ProtocolIntegrity.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.19;\r\n\r\ncontract ProtocolIntegrity {\r\n    // Протоколын бүтэц\r\n    struct record {\r\n        string ipfsHash;\r\n        uint256 timestamp;\r\n        address owner;\r\n    }\r\n\r\n    // ID-аар нь хадгалах сан\r\n    mapping(uint256 => record) public meetingRecords;\r\n\r\n    // Үйл явдлыг бүртгэх (Frontend-д мэдэгдэхэд хэрэгтэй)\r\n    event RecordStored(uint256 indexed meetingId, string ipfsHash);\r\n\r\n    // Хадгалах функц\r\n    function storeHash(uint256 _meetingId, string memory _ipfsHash) public {\r\n        meetingRecords[_meetingId] = record(_ipfsHash, block.timestamp, msg.sender);\r\n        emit RecordStored(_meetingId, _ipfsHash);\r\n    }\r\n\r\n    function getHash(uint256 _meetingId) public view returns (string memory) {\r\n        return meetingRecords[_meetingId].ipfsHash;\r\n    }\r\n}"
+      }
+    }
+  }
+}
